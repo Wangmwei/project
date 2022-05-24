@@ -59,3 +59,30 @@ View：表示当前页面所渲染的DOM结构
 ViewModel：表示vue的实例，它是MVVM的核心
 
 注意：数据驱动视图和双向数据绑定的底层原理是MVVM
+
+### vue组件的三个组成部分
+每个.vue组件都由3部分构成，分别是：
+template :组件的模板结构
+script : 组件的JavaScript行为
+style :组件的样式
+其中template是每个组件都必须包含的模板结构，而script行为和style样式是可选的组成部分
+
+### 组件化
+组件在被封装之后，彼此之间是相互独立的，不存在父子关系
+在使用组件的时候，根据彼此的嵌套关系，形成了父子关系，兄弟关系
+
+使用组件的三个步骤：
+步骤一：使用Import语法导入需要的组件
+import Left from '@/components/Left.vue'
+步骤二：使用components结点注册组件
+export default{
+    components:{
+        Left
+    }
+}
+步骤三：以标签形式使用刚才注册的组件
+<Left></Left>
+
+
+
+
